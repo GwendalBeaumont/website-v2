@@ -118,6 +118,7 @@ author:
   bio              : "PhD Student in Computer Sciences"
   location         : "Vienna, Austria"
   email            :
+  github: "GwendalBeaumont"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
