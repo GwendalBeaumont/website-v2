@@ -1,11 +1,7 @@
 ---
 layout: single
 permalink: /teaching/
-title: teaching
-description: Teaching experience earned throughout the years
 author_profile: true
-# nav: true
-# nav_order: 3
 ---
 
 <!-- _pages/teaching.md -->
