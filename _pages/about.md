@@ -1,8 +1,8 @@
 ---
-layout: single
-title: About
-permalink: /
-subtitle: IMT Atlantique - <a href='https://labsticc.fr/'>Lab-STICC, CNRS, UMR 6285</a> • Brest, FR • contact@gwendalbeaumont.fr
+# layout: single
+# title: About
+# permalink: /
+# subtitle: IMT Atlantique - <a href='https://labsticc.fr/'>Lab-STICC, CNRS, UMR 6285</a> • Brest, FR • contact@gwendalbeaumont.fr
 
 # profile:
 #   align: right
@@ -12,6 +12,16 @@ subtitle: IMT Atlantique - <a href='https://labsticc.fr/'>Lab-STICC, CNRS, UMR 6
 # news: false # includes a list of news items
 # selected_papers: true # includes a list of papers marked as "selected={true}"
 # social: true # includes social icons at the bottom of the page
+
+defaults:
+  # _pages
+  - scope:
+      path: ""
+      type: pages
+    values:
+      layout: single
+      author_profile: true
+
 ---
 
 Hello all! 👋
