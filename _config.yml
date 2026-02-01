@@ -94,6 +94,7 @@ author:
 footer:
   since: "2023"
 
+include: ["_pages"]
 
 # Reading Files
 include:
