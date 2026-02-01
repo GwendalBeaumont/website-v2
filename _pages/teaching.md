@@ -10,6 +10,7 @@ Below is a teaching experience summary table. More details about each entry are 
 
 | Year      | Course                                             | Academic Level | Institution    | Hours  | Type            |
 | --------- | -------------------------------------------------- | -------------- | -------------- | ------ | --------------- |
+| 2025-2026 | Engineering study                                  | Master 2       | IMT Mines Alès | 10h    | Student Project |
 | 2025-2026 | Software Development                               | Master 1       | IMT Atlantique | 2.5h   | TP/TD           |
 | 2024-2025 | Concurrent computing (FSP + Java)                  | Master 1       | IMT Atlantique | 16.25h | TP/TD + Exam    |
 | 2024-2025 | Algorithm (Python)                                 | License 3      | IMT Atlantique | 10h    | TP/TD           |
@@ -31,7 +32,7 @@ Description under construction
 
 Description under construction
 
-## Engineering study, IMT Mines Alès (2024-2025)
+## Engineering study, IMT Mines Alès (2024-2025, 2025-2026)
 
 Description under construction
 
