@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: home
 # title: About
 permalink: /about/
 # subtitle: IMT Atlantique - <a href='https://labsticc.fr/'>Lab-STICC, CNRS, UMR 6285</a> • Brest, FR • contact@gwendalbeaumont.fr
