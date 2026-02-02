@@ -14,8 +14,4 @@ mkShell {
     rubyPackages.jekyll
     bundler
   ];
-
-  shellHook = ''
-    code .
-  '';
 }
