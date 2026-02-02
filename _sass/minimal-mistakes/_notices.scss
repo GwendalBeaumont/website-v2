@@ -10,19 +10,25 @@
  *  </div>
  */
 
+@use "sass:color";
+@use "sass:selector";
+
 @mixin notice($notice-color) {
-  margin: 2em 0 !important;  /* override*/
+  margin: 2em 0 !important;
+  /* override*/
   padding: 1em;
   color: $text-color;
   font-family: $global-font-family;
   font-size: $type-size-6 !important;
-  text-indent: initial; /* override*/
-  background-color: mix($background-color, $notice-color, $notice-background-mix);
+  text-indent: initial;
+  /* override*/
+  background-color: color.mix($background-color, $notice-color, $notice-background-mix);
   border-radius: $border-radius;
   box-shadow: 0 1px 1px rgba($notice-color, 0.25);
 
   h4 {
-    margin-top: 0 !important; /* override*/
+    margin-top: 0 !important;
+    /* override*/
     margin-bottom: 0.75em;
     line-height: inherit;
   }
@@ -35,39 +41,41 @@
 
   p {
     &:last-child {
-      margin-bottom: 0 !important; /* override*/
+      margin-bottom: 0 !important;
+      /* override*/
     }
   }
 
-  h4 + p {
+  h4+p {
     /* remove space above paragraphs that appear directly after notice headline*/
     margin-top: 0;
     padding-top: 0;
   }
 
   a {
-    color: mix(#000, $notice-color, 10%);
+    color: color.mix(#000, $notice-color, 10%);
 
     &:hover {
-      color: mix(#000, $notice-color, 50%);
+      color: color.mix(#000, $notice-color, 50%);
     }
   }
 
-  @at-root #{selector-unify(&, "blockquote")} {
-    border-inline-start-color: mix(#000, $notice-color, 10%);
+  @at-root #{selector.unify(&, "blockquote")} {
+    border-inline-start-color: color.mix(#000, $notice-color, 10%);
   }
 
   code {
-    background-color: mix($background-color, $notice-color, $code-notice-background-mix)
+    background-color: color.mix($background-color, $notice-color, $code-notice-background-mix)
   }
 
-	pre code {
-		background-color: inherit;
-	}
+  pre code {
+    background-color: inherit;
+  }
 
   ul {
     &:last-child {
-      margin-bottom: 0; /* override*/
+      margin-bottom: 0;
+      /* override*/
     }
   }
 }
