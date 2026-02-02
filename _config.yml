@@ -20,7 +20,7 @@ title_separator: "|"
 name: "Gwendal Beaumont"
 description: "A website describing my reearch career."
 url: "https://gwendalbeaumont.github.io"
-baseurl: "/website-v2"
+baseurl: "/v2"
 repository: "GwendalBeaumont/website-v2"
 masthead_title: ""
 breadcrumbs: false
