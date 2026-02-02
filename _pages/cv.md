@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: cv
 permalink: /cv/
-cv_pdf: curriculum_vitae.pdf
+author_profile: true
 ---

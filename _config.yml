@@ -199,6 +199,7 @@ plugins:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+  - jekyll-get-json
   - jekyll-scholar
 
 # mimic GitHub Pages with --safe
@@ -208,6 +209,8 @@ whitelist:
   - jekyll-gist
   - jekyll-feed
   - jekyll-include-cache
+  - jekyll-get-json
+  - jekyll-scholar
 
 
 # Archives
@@ -264,3 +267,21 @@ defaults:
       comments: # true
       share: true
       related: true
+
+# -----------------------------------------------------------------------------
+# Get external JSON data
+# -----------------------------------------------------------------------------
+
+jekyll_get_json:
+  - data: resume
+    json: assets/json/resume.json # it can also be an url
+jsonresume:
+  - basics
+  - work
+  - education
+  - publications
+  - volunteer
+  - certificates
+  - skills
+  - languages
+  - interests

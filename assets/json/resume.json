@@ -1,0 +1,184 @@
+{
+  "basics": {
+    "name": "Gwendal Beaumont",
+    "label": "Ph.D. Candidate",
+    "image": "",
+    "email": "contact@gwendalbeaumont.fr",
+    "summary": "Gratuated in Computer Science Engineering in 2023, I now pursue a Ph.D. in the field of Digital Twins and DevOps."
+  },
+  "work": [
+    {
+      "name": "Miami University",
+      "location": "Oxford, OH, USA",
+      "position": "Visiting International Scholar",
+      "url": "https://miamioh.edu/",
+      "startDate": "2022-05-02",
+      "endDate": "2023-08-19",
+      "summary": "Internship as an assistant in the preparation of a master thesis on the effect of errors in agent-based simulation systems.",
+      "highlights": [
+        "State of the art on the topic of errors representation in computer simulation",
+        "Creation of a simulation framework in Python to take errors into account",
+        "Creation of multiple agent-based simulation in Python to test our framework"
+      ]
+    },
+    {
+      "name": "ALTEN Labs",
+      "location": "Rennes, France",
+      "position": "Intern",
+      "url": "https://www.alten.com/",
+      "startDate": "2023-03-06",
+      "endDate": "2023-09-01",
+      "summary": "Research intership on the labelling process of data in order to be used with Machine Learning algorithm.",
+      "highlights": ["Creation of an application", "Creation of a framework"]
+    },
+    {
+      "name": "TU Wien",
+      "location": "Vienna, Austria",
+      "position": "Doctoral Visiting Researcher",
+      "url": "https://www.tuwien.at/",
+      "startDate": "2026-01-05",
+      "endDate": "2026-04-03",
+      "summary": "Doctoral mobility hosted by Assoc. Prof. Dominik Bork.",
+      "highlights": ["TBD"]
+    }
+  ],
+  "volunteer": [
+    {
+      "organization": "IMT Mines Alès Student Council",
+      "position": "Communications Manager",
+      "url": "https://cercle-des-eleves.fr/",
+      "startDate": "2021-03-01",
+      "endDate": "2022-03-01",
+      "summary": "Member of the communications managers team for the student council during a year.",
+      "highlights": ["Administration of a website", "Managing social networks"]
+    },
+    {
+      "organization": "Mines-Télécom Institute",
+      "position": "Ph.D. Students representative at the board of directors",
+      "url": "https://www.imt.fr/",
+      "startDate": "2023-12-01",
+      "endDate": "2025-12-02",
+      "summary": "IMT PhD Students representative at the national level for two years. I took part in the board of directors of the Institute and a work group that works towards respect and egality.",
+      "highlights": ["Creation of a national Ph.D. students network", "Creation of national events for Ph.D. students"]
+    },
+    {
+      "organization": "EULiST Alliance",
+      "position": "Ph.D. Students representative",
+      "url": "https://www.imt.fr/",
+      "startDate": "2023-12-01",
+      "endDate": "2025-12-01",
+      "summary": "Institut Mines-Télécom Ph.D. students representative at the european level in the EULiST Alliance. This alliance integrates over 200,000 students and 20,000 staff at 10 universities in 10 countries."
+    }
+  ],
+  "education": [
+    {
+      "institution": "IMT Atlantique",
+      "location": "Brest, France",
+      "url": "https://www.imt-atlantique.fr/",
+      "area": "Software Engineering",
+      "studyType": "Ph.D. Candidate",
+      "startDate": "2023-10-01",
+      "endDate": "",
+      "score": "10",
+      "courses": ["Digital Twins", "DevOps", "Model-Driven Engineering"]
+    },
+    {
+      "institution": "IMT Mines Alès",
+      "location": "Alès, France",
+      "url": "https://www.imt-mines-ales.fr/",
+      "area": "General Engineering",
+      "studyType": "Engineer's Degree",
+      "startDate": "2020-01-01",
+      "endDate": "2023-09-26",
+      "score": "10",
+      "courses": ["Computer Sciences", "Software Engineering", "Artificial Intelligence"]
+    }
+  ],
+  "certificates": [
+    {
+      "name": "T.O.E.I.C. (975/990)",
+      "date": "2020-11-09",
+      "issuer": "ETS Global",
+      "url": "https://www.etsglobal.org/"
+    },
+    {
+      "name": "Engineer's Degree",
+      "date": "2023-09-26",
+      "issuer": "IMT Mines Alès",
+      "url": "https://www.imt-mines-ales.fr/"
+    }
+  ],
+  "publications": [
+    {
+      "name": "A Scoping Review of Three Dimensions for Long-Term COVID-19 Vaccination Models: Hybrid Immunity, Individual Drivers of Vaccinal Choice, and Human Errors",
+      "publisher": "Vaccines",
+      "releaseDate": "2022-10-14",
+      "url": "https://doi.org/10.3390/vaccines10101716",
+      "summary": ""
+    },
+    {
+      "name": "On the Necessity of Human Decision-Making Errors to Explain Vaccination Rates for Covid-19: an Agent-Based Modeling Study",
+      "publisher": "2023 Annual Modeling and Simulation Conference (ANNSIM)",
+      "releaseDate": "2023-05-23",
+      "url": "https://ieeexplore.ieee.org/document/10155377",
+      "summary": ""
+    },
+    {
+      "name": "A framework for the comparison of errors in agent-based models using machine learning",
+      "publisher": "Journal of Computational Science",
+      "releaseDate": "2023-08-07",
+      "url": "https://doi.org/10.1016/j.jocs.2023.102119",
+      "summary": ""
+    },
+    {
+      "name": "Towards Re-Engineering Digital Twins: Preliminary Experiments on Three use Cases",
+      "publisher": "ACM/IEEE 27th International Conference on Model Driven Engineering Languages and Systems (MODELS Companion '24)",
+      "releaseDate": "2024-10-31",
+      "url": "https://doi.org/10.1145/3652620.3688259",
+      "summary": ""
+    },
+    {
+      "name": "Towards Automating the Life Cycle Management of Digital Twins",
+      "publisher": "Conceptual Modeling (ER 2025)",
+      "releaseDate": "2025-10-19",
+      "url": "https://doi.org/10.1007/978-3-032-08623-5_22",
+      "summary": ""
+    }
+  ],
+  "skills": [
+    {
+      "name": "Coding",
+      "level": "",
+      "icon": "fa-solid fa-hashtag",
+      "keywords": ["C/C++", "Java", "JavaScript", "Python", "TypeScript"]
+    },
+    {
+      "name": "Infra",
+      "level": "",
+      "icon": "fa-solid fa-hashtag",
+      "keywords": ["Linux", "Docker", "Network"]
+    }
+  ],
+  "languages": [
+    {
+      "language": "French",
+      "fluency": "Native",
+      "icon": ""
+    },
+    {
+      "language": "English",
+      "fluency": "Fluent",
+      "icon": ""
+    },
+    {
+      "language": "Spanish",
+      "fluency": "Professional Working Proficiency",
+      "icon": ""
+    },
+    {
+      "language": "Korean",
+      "fluency": "Elementary",
+      "icon": ""
+    }
+  ]
+}
