@@ -6,6 +6,7 @@ mkShell {
   nativeBuildInputs = with pkgs.buildPackages; [
     libgcc
     gnumake
+    vscode.fhs
   ];
 
   buildInputs = with pkgs; [
@@ -13,4 +14,8 @@ mkShell {
     rubyPackages.jekyll
     bundler
   ];
+
+  shellHook = ''
+    code .
+  '';
 }
