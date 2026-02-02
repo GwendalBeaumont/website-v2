@@ -311,7 +311,7 @@
     $calc: '#{$calc + $fluid-calc}';
   }
 
-  @return calc(#{unquote($calc)});
+  @return calc(unquote($calc));
 }
 
 
