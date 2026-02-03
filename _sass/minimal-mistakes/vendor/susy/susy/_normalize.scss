@@ -18,7 +18,10 @@
 /// @see susy-normalize-columns
 /// @see susy-normalize-spread
 /// @see susy-normalize-location
-
+@use "sass:list";
+@use "sass:math";
+@use "sass:map";
+@use "sass:meta";
 
 
 // Susy Normalize
@@ -50,48 +53,47 @@
 /// @return {map} -
 ///   Map of Susy configuration settings,
 ///   with all values normalized for Su math functions.
-@function susy-normalize(
-  $config,
-  $context: null
-) {
+@function susy-normalize($config,
+  $context: null) {
+
   // Spread
   @each $setting in ('spread', 'container-spread') {
-    $value: map-get($config, $setting);
+    $value: map.get($config, $setting);
 
     @if $value {
       $value: susy-normalize-spread($value);
-      $config: map-merge($config, ($setting: $value));
+      $config: map.merge($config, ($setting: $value));
     }
   }
 
   // Columns
-  $columns: map-get($config, 'columns');
+  $columns: map.get($config, 'columns');
 
   @if $columns {
     $columns: susy-normalize-columns($columns, $context);
-    $config: map-merge($config, ('columns': $columns));
+    $config: map.merge($config, ('columns': $columns));
   }
 
   @if not $columns {
-    $map: type-of($context) == 'map';
-    $columns: if(sass($map): map-get($context, 'columns'); else: null);
+    $map: meta.type-of($context)=='map';
+    $columns: if(sass($map): map.get($context, 'columns'); else: null);
     $columns: $columns or susy-get('columns');
   }
 
   // Span
-  $span: map-get($config, 'span');
+  $span: map.get($config, 'span');
 
   @if $span {
     $span: susy-normalize-span($span, $columns);
-    $config: map-merge($config, ('span': $span));
+    $config: map.merge($config, ('span': $span));
   }
 
   // Location
-  $location: map-get($config, 'location');
+  $location: map.get($config, 'location');
 
   @if $location {
     $location: susy-normalize-location($span, $location, $columns);
-    $config: map-merge($config, ('location': $location));
+    $config: map.merge($config, ('location': $location));
   }
 
   @return $config;
@@ -119,12 +121,10 @@
 ///
 /// @return {number | list} -
 ///   Number or list value for `$span`
-@function susy-normalize-span(
-  $span,
-  $columns: susy-get('columns')
-) {
-  @if ($span == 'all') {
-    @return length($columns);
+@function susy-normalize-span($span,
+  $columns: susy-get('columns')) {
+  @if ($span =='all') {
+    @return list.length($columns);
   }
 
   @return $span;
@@ -156,28 +156,27 @@
 ///
 /// @throws
 ///   when attempting to access a slice of asymmetrical context
-@function susy-normalize-columns(
-  $columns,
-  $context: null
-) {
+@function susy-normalize-columns($columns,
+  $context: null) {
   $context: $context or susy-settings();
 
-  @if type-of($columns) == 'list' {
+  @if meta.type-of($columns)=='list' {
     @return _susy-flatten($columns);
   }
 
-  @if (type-of($columns) == 'number') and (unitless($columns)) {
+  @if (meta.type-of($columns)=='number') and (math.is-unitless($columns)) {
     $span: $columns;
-    $context: map-get($context, 'columns');
-    $symmetrical: susy-repeat(length($context), nth($context, 1));
+    $context: map.get($context, 'columns');
+    $symmetrical: susy-repeat(list.length($context), list.nth($context, 1));
 
-    @if ($context == $symmetrical) {
-      @return susy-repeat($span, nth($context, 1));
-    } @else {
+    @if ($context ==$symmetrical) {
+      @return susy-repeat($span, list.nth($context, 1));
+    }
+
+    @else {
       $actual: 'of `#{$span}`';
       $columns: 'grid-columns `#{$context}`';
-      @return _susy-error(
-        'context-slice #{$actual} can not be determined based on #{$columns}.',
+      @return _susy-error('context-slice #{$actual} can not be determined based on #{$columns}.',
         'susy-normalize-columns');
     }
   }
@@ -207,16 +206,14 @@
 ///
 /// @return {number} -
 ///   Numeric value for `$spread`
-@function susy-normalize-spread(
-  $spread
-) {
+@function susy-normalize-spread($spread) {
   $normal-spread: (
     'narrow': -1,
     'wide': 0,
     'wider': 1,
   );
 
-  @return map-get($normal-spread, $spread) or $spread;
+@return map.get($normal-spread, $spread) or $spread;
 }
 
 
@@ -244,12 +241,10 @@
 ///
 /// @return {integer} -
 ///   Numeric value for `$location`
-@function susy-normalize-location(
-  $span,
+@function susy-normalize-location($span,
   $location,
-  $columns
-) {
-  $count: length($columns);
+  $columns) {
+  $count: list.length($columns);
   $normal-locations: (
     'first': 1,
     'alpha': 1,
@@ -257,5 +252,5 @@
     'omega': $count - $span + 1,
   );
 
-  @return map-get($normal-locations, $location) or $location;
+@return map.get($normal-locations, $location) or $location;
 }

@@ -11,7 +11,7 @@
 @import "parsers/triple";
 @import "parsers/resolution";
 
-$Memo-Exists: meta.function-exists(memo-get) and function-exists(memo-set);
+$Memo-Exists: meta.function-exists(memo-get) and meta.function-exists(memo-set);
 
 //////////////////////////////
 // Breakpoint Function
@@ -71,7 +71,7 @@ $or-list: if(sass(list.separator($query)=='comma'): true; else: false
     );
 
   @for $i from 1 through $length {
-    $mq: append($mq, list.nth($query, $i), comma);
+    $mq: list.append($mq, list.nth($query, $i), comma);
   }
 
   $query-string: breakpoint-parse($mq);
@@ -231,11 +231,11 @@ $first: true;
   @if list.length($v-holder) < $private-breakpoint-query-count {
     @for $i from $length to $private-breakpoint-query-count {
       @if $f =='media' {
-        $v-holder: append($v-holder, breakpoint-get('default media'));
+        $v-holder: list.append($v-holder, breakpoint-get('default media'));
       }
 
       @else {
-        $v-holder: append($v-holder, false);
+        $v-holder: list.append($v-holder, false);
       }
     }
   }

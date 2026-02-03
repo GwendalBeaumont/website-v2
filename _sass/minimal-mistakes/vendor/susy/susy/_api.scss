@@ -26,8 +26,8 @@
 /// @see su-span
 /// @see su-gutter
 /// @see su-slice
-
-
+@use "sass:map";
+@use "sass:meta";
 
 /// ## Shorthand
 ///
@@ -136,19 +136,16 @@
 ///   .foo {
 ///     width: susy-span(3 at 3 of (1 2 3 5 8));
 ///   }
-@function susy-span(
-  $span,
-  $config: ()
-) {
+@function susy-span($span,
+  $config: ()) {
   $output: susy-compile($span, $config);
 
-  @if map-get($output, 'span') {
+  @if map.get($output, 'span') {
     @return su-call('su-span', $output);
   }
 
-  $actual: '[#{type-of($span)}] `#{inspect($span)}`';
-  @return _susy-error(
-    'Unable to determine span value from #{$actual}.',
+  $actual: '[#{meta.type-of($span)}] `#{inspect($span)}`';
+  @return _susy-error('Unable to determine span value from #{$actual}.',
     'susy-span');
 }
 
@@ -196,10 +193,8 @@
 ///     padding: gutter(of 6) / 2;
 ///   }
 ///
-@function susy-gutter(
-  $context: susy-get('columns'),
-  $config: ()
-) {
+@function susy-gutter($context: susy-get('columns'),
+  $config: ()) {
   $context: susy-compile($context, $config, 'context-only');
 
   @return su-call('su-gutter', $context);
@@ -246,10 +241,8 @@
 /// @example scss - Return a nested segment of asymmetrical grid
 ///   $context: susy-slice(3 at 3 of (1 2 3 5 8));
 ///   /* $context: #{$context}; */
-@function susy-slice(
-  $span,
-  $config: ()
-) {
+@function susy-slice($span,
+  $config: ()) {
   $span: susy-compile($span, $config);
 
   @return su-call('su-slice', $span);
@@ -311,7 +304,7 @@
 ///     }
 ///   }
 ///
-///   @for $span from 1 through length(susy-get('columns')) {
+///   @for $span from 1 through list.length(susy-get('columns')) {
 ///     [data-span*='#{$span}'] {
 ///       width: span($span);
 ///     }

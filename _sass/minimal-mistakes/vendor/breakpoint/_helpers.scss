@@ -156,7 +156,7 @@ $breakpoint-single-string-features: 'color',
   }
 
   @each $reso in $resolutions {
-    @if index($feature, $reso) or index($feature, 'min-#{$reso}') or index($feature, 'max-#{$reso}') {
+    @if list.index($feature, $reso) or list.index($feature, 'min-#{$reso}') or list.index($feature, 'max-#{$reso}') {
       @return true;
     }
   }

@@ -1,4 +1,5 @@
 @use "sass:map";
+@use "sass:meta";
 
 //////////////////////////////
 // Default Variables
@@ -73,7 +74,7 @@ $private-breakpoint-query-count: map.get($breakpoint, 'query count') !global;
 
 @if breakpoint-get('no query fallbacks') !=false or breakpoint-get('no queries')==true {
 
-  $type: type-of(breakpoint-get('no query fallbacks'));
+  $type: meta.type-of(breakpoint-get('no query fallbacks'));
   $print: false;
 
   @if ($type =='bool') {
@@ -96,7 +97,7 @@ $private-breakpoint-query-count: map.get($breakpoint, 'query count') !global;
 
   // Write Fallback
   @if ($query-fallback !=false) and ($print ==true) {
-    $type-fallback: type-of($query-fallback);
+    $type-fallback: meta.type-of($query-fallback);
 
     @if ($type-fallback !='bool') {
       #{$query-fallback} & {

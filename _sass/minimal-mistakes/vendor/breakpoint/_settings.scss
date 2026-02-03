@@ -1,3 +1,4 @@
+@use "sass:list";
 @use "sass:map";
 @use "sass:string";
 
@@ -59,12 +60,12 @@
 // Remove Setting
 //////////////////////////////
 @function breakpoint-reset($settings...) {
-  @if length($settings)==1 {
-    $settings: nth($settings, 1);
+  @if list.length($settings)==1 {
+    $settings: list.nth($settings, 1);
   }
 
   @each $setting in $settings {
-    $breakpoint: map-remove($breakpoint, $setting) !global;
+    $breakpoint: map.remove($breakpoint, $setting) !global;
   }
 
   @return true;

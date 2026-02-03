@@ -7,6 +7,7 @@
    ========================================================================== */
 
 /* http://www.456bereastreet.com/archive/200711/screen_readers_sometimes_ignore_displaynone/ */
+@use "sass:color";
 
 .hidden,
 .is--hidden {
@@ -89,6 +90,7 @@ body:hover .visually-hidden button {
    ========================================================================== */
 
 $text-alignments: left, right, start, end, center, justify;
+
 @each $alignment in $text-alignments {
   .text-#{$alignment} {
     text-align: $alignment;
@@ -196,6 +198,7 @@ $text-alignments: left, right, start, end, center, justify;
 /* social icons*/
 
 .social-icons {
+
   .fas,
   .fab,
   .far,
@@ -203,8 +206,7 @@ $text-alignments: left, right, start, end, center, justify;
     color: $text-color;
   }
 
-  @each $color, $icons in (
-    $behance-color: ".fa-behance, .fa-behance-square",
+  @each $color, $icons in ($behance-color: ".fa-behance, .fa-behance-square",
     $bitbucket-color: ".fa-bitbucket",
     $dribbble-color: ".fa-dribbble, .fa-dribbble-square",
     $facebook-color: ".fa-facebook, .fa-facebook-square, .fa-facebook-f",
@@ -289,6 +291,7 @@ $text-alignments: left, right, start, end, center, justify;
     -webkit-transform: rotate3d(0, 0, 1, 45deg);
     transform: rotate3d(0, 0, 1, 45deg);
   }
+
   &:after {
     -webkit-transform: rotate3d(0, 0, 1, -45deg);
     transform: rotate3d(0, 0, 1, -45deg);
@@ -323,10 +326,11 @@ $text-alignments: left, right, start, end, center, justify;
 }
 
 .greedy-nav__toggle:hover {
+
   .navicon,
   .navicon:before,
   .navicon:after {
-    background: mix(#000, $primary-color, 25%);
+    background: color.mix(#000, $primary-color, 25%);
   }
 
   &.close {
@@ -347,7 +351,7 @@ $text-alignments: left, right, start, end, center, justify;
     position: sticky;
     top: 2em;
 
-    > * {
+    >* {
       display: block;
     }
   }
@@ -426,12 +430,12 @@ $text-alignments: left, right, start, end, center, justify;
    ========================================================================== */
 
 .footnote {
-  color: mix(#fff, $gray, 25%);
+  color: color.mix(#fff, $gray, 25%);
   text-decoration: none;
 }
 
 .footnotes {
-  color: mix(#fff, $gray, 25%);
+  color: color.mix(#fff, $gray, 25%);
 
   ol,
   li,
@@ -464,10 +468,12 @@ a.reversefootnote {
    ========================================================================== */
 
 .gsc-control-cse {
+
   table,
   tr,
   td {
-    border: 0; /* remove table borders widget */
+    border: 0;
+    /* remove table borders widget */
   }
 }
 
@@ -496,6 +502,7 @@ a.reversefootnote {
 
 // full screen video fixes
 :-webkit-full-screen-ancestor {
+
   .masthead,
   .page__footer {
     position: static;
@@ -549,6 +556,7 @@ pre {
       position: absolute;
       top: 0.25em;
       inset-inline-end: 0.25em;
+
       &.copied {
         opacity: 0;
       }
@@ -556,6 +564,7 @@ pre {
 
     &.copied i {
       opacity: 0;
+
       &.copied {
         opacity: 1;
       }
